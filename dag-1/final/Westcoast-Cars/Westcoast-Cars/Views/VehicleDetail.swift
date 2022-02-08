@@ -7,37 +7,43 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct VehicleDetail: View {
+    var vehicle: Vehicle
+    
     var body: some View {
         VStack{
             Image("WestcoastBackground")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-            Image("volvo-v90")
+            Image(vehicle.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .clipShape(Circle())
                 .overlay(Circle()
                             .stroke(Color.white, lineWidth: 4))
-                .padding(.top, -90)
+                .offset(x: 0, y: -90)
+                .padding(.bottom, -70)
                 .shadow(radius: 20)
                 
             
-            Text("Volvo")
-                .font(.system(size: 50))
+            Text("Tillverkare är \(vehicle.make)")
+                .font(.system(size: 60))
                 .fontWeight(.semibold)
-            VehicleInfo(title: "Modell:", value: "V90")
-            VehicleInfo(title: "Årsmodell:", value: "2019")
-            VehicleInfo(title: "Antal km", value: "50000")
+                .lineLimit(1)
+                .minimumScaleFactor(0.4)
+                .padding()
+            VehicleInfo(title: "Modell:", value: "\(vehicle.model)")
+            VehicleInfo(title: "Årsmodell:", value: "\(vehicle.modelYear)")
+            VehicleInfo(title: "Antal km", value: "\(vehicle.mileage)")
             
             Spacer()
         }.edgesIgnoringSafeArea(.top)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct VehicleDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        VehicleDetail(vehicle: vehicles[0])
     }
 }
 

@@ -8,19 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		EA26876D27B25EDE00F2C783 /* Westcoast_CarsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26876C27B25EDE00F2C783 /* Westcoast_CarsApp.swift */; };
-		EA26876F27B25EDE00F2C783 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26876E27B25EDE00F2C783 /* ContentView.swift */; };
+		EA26876F27B25EDE00F2C783 /* VehicleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26876E27B25EDE00F2C783 /* VehicleDetail.swift */; };
 		EA26877127B25EDF00F2C783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA26877027B25EDF00F2C783 /* Assets.xcassets */; };
 		EA26877427B25EDF00F2C783 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA26877327B25EDF00F2C783 /* Preview Assets.xcassets */; };
 		EA26877C27B26FB400F2C783 /* VehicleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26877B27B26FB400F2C783 /* VehicleInfo.swift */; };
+		EA26877E27B276E700F2C783 /* VehicleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26877D27B276E700F2C783 /* VehicleList.swift */; };
+		EA26878127B2774000F2C783 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26878027B2774000F2C783 /* Vehicle.swift */; };
+		EA26878327B27BF000F2C783 /* VehicleListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26878227B27BF000F2C783 /* VehicleListRow.swift */; };
+		EA26878527B281D400F2C783 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26878427B281D400F2C783 /* Home.swift */; };
+		EA26878727B296BD00F2C783 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26878627B296BD00F2C783 /* Welcome.swift */; };
+		EA26878927B2A60C00F2C783 /* CreateVehicleForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26878827B2A60C00F2C783 /* CreateVehicleForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA26876927B25EDE00F2C783 /* Westcoast-Cars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Westcoast-Cars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26876C27B25EDE00F2C783 /* Westcoast_CarsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Westcoast_CarsApp.swift; sourceTree = "<group>"; };
-		EA26876E27B25EDE00F2C783 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EA26876E27B25EDE00F2C783 /* VehicleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetail.swift; sourceTree = "<group>"; };
 		EA26877027B25EDF00F2C783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA26877327B25EDF00F2C783 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA26877B27B26FB400F2C783 /* VehicleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleInfo.swift; sourceTree = "<group>"; };
+		EA26877D27B276E700F2C783 /* VehicleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleList.swift; sourceTree = "<group>"; };
+		EA26878027B2774000F2C783 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		EA26878227B27BF000F2C783 /* VehicleListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListRow.swift; sourceTree = "<group>"; };
+		EA26878427B281D400F2C783 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		EA26878627B296BD00F2C783 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		EA26878827B2A60C00F2C783 /* CreateVehicleForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVehicleForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +65,9 @@
 		EA26876B27B25EDE00F2C783 /* Westcoast-Cars */ = {
 			isa = PBXGroup;
 			children = (
+				EA26877F27B2773100F2C783 /* Models */,
 				EA26877A27B26F9D00F2C783 /* Views */,
 				EA26876C27B25EDE00F2C783 /* Westcoast_CarsApp.swift */,
-				EA26876E27B25EDE00F2C783 /* ContentView.swift */,
 				EA26877027B25EDF00F2C783 /* Assets.xcassets */,
 				EA26877227B25EDF00F2C783 /* Preview Content */,
 			);
@@ -73,9 +85,23 @@
 		EA26877A27B26F9D00F2C783 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA26876E27B25EDE00F2C783 /* VehicleDetail.swift */,
 				EA26877B27B26FB400F2C783 /* VehicleInfo.swift */,
+				EA26877D27B276E700F2C783 /* VehicleList.swift */,
+				EA26878227B27BF000F2C783 /* VehicleListRow.swift */,
+				EA26878427B281D400F2C783 /* Home.swift */,
+				EA26878627B296BD00F2C783 /* Welcome.swift */,
+				EA26878827B2A60C00F2C783 /* CreateVehicleForm.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EA26877F27B2773100F2C783 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA26878027B2774000F2C783 /* Vehicle.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA26877E27B276E700F2C783 /* VehicleList.swift in Sources */,
+				EA26878327B27BF000F2C783 /* VehicleListRow.swift in Sources */,
 				EA26877C27B26FB400F2C783 /* VehicleInfo.swift in Sources */,
-				EA26876F27B25EDE00F2C783 /* ContentView.swift in Sources */,
+				EA26876F27B25EDE00F2C783 /* VehicleDetail.swift in Sources */,
+				EA26878727B296BD00F2C783 /* Welcome.swift in Sources */,
+				EA26878927B2A60C00F2C783 /* CreateVehicleForm.swift in Sources */,
+				EA26878127B2774000F2C783 /* Vehicle.swift in Sources */,
 				EA26876D27B25EDE00F2C783 /* Westcoast_CarsApp.swift in Sources */,
+				EA26878527B281D400F2C783 /* Home.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

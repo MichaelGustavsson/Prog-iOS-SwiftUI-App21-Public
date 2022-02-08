@@ -11,7 +11,7 @@ import SwiftUI
 struct Westcoast_CarsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Home()
         }
     }
 }
