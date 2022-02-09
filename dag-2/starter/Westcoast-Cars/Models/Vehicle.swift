@@ -20,7 +20,7 @@ struct Vehicle: Identifiable {
     let gears: Int
     let seats: Int
     let wheelSets: Int
-    let engineHk: String
+    let engineHk: String?
     let imported: Bool
     let value: Int
     let imageUrl: String?
