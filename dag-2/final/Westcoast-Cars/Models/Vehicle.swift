@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Vehicle: Identifiable {
+struct Vehicle: Codable, Identifiable {
     let id: String
     let registrationNumber: String
     let model: String
@@ -20,13 +20,33 @@ struct Vehicle: Identifiable {
     let gears: Int
     let seats: Int
     let wheelSets: Int
-    let engineHk: String
+    let engineHk: String?
     let imported: Bool
     let value: Int
     let imageUrl: String?
     let description: String?
     let manufacturor: Manufacturor
     
+    private enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case registrationNumber = "registrationNumber"
+        case model = "model"
+        case color = "color"
+        case modelYear = "modelYear"
+        case mileage = "mileage"
+        case fuelType = "fuelType"
+        case gearType = "gearType"
+        case doors = "numberOfDoors"
+        case gears = "numberOfGears"
+        case seats = "numberOfSeats"
+        case wheelSets = "numberOfWheelSets"
+        case engineHk = "enginePower"
+        case imported = "isImported"
+        case value = "value"
+        case imageUrl = "imageUrl"
+        case description = "description"
+        case manufacturor = "manufacturor"
+    }
 }
 
 

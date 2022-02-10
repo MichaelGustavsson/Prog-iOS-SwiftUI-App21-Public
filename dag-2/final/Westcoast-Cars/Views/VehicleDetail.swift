@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct VehicleDetail: View {
-    var vehicle: Vehicle
+    var vehicle: VehicleViewModel
     
     var body: some View {
         VStack{
             Image("WestcoastBackground")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-            UrlImage(url: vehicle.imageUrl!)
+                UrlImage(url: vehicle.image)
                 .aspectRatio(contentMode: .fit)
                 .clipShape(Circle())
                 .overlay(Circle()
@@ -25,13 +25,13 @@ struct VehicleDetail: View {
                 .shadow(radius: 20)
             
             
-            Text("Tillverkare är \(vehicle.manufacturor.name)")
+            Text("Tillverkare är \(vehicle.manufacturor)")
                 .font(.system(size: 60))
                 .fontWeight(.semibold)
                 .lineLimit(1)
                 .minimumScaleFactor(0.4)
                 .padding()
-            VehicleInfo(title: "Modell:", value: "\(vehicle.model)")
+            VehicleInfo(title: "Modell:", value: "\(vehicle.vehicleName)")
             VehicleInfo(title: "Årsmodell:", value: "\(vehicle.modelYear)")
             VehicleInfo(title: "Antal km", value: "\(vehicle.mileage)")
             
@@ -40,11 +40,11 @@ struct VehicleDetail: View {
     }
 }
 
-struct VehicleDetail_Previews: PreviewProvider {
-
-    static var previews: some View {
-        VehicleDetail(vehicle: vehicles[0])
-    }
-}
+//struct VehicleDetail_Previews: PreviewProvider {
+//
+//    static var previews: some View {
+//        VehicleDetail(vehicle: vehicles[0])
+//    }
+//}
 
 

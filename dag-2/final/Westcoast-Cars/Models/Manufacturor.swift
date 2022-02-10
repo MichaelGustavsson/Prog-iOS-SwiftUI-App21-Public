@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Manufacturor: Identifiable {
+struct Manufacturor: Codable, Identifiable {
     let id: String
     let name: String
     let logoImage: String?

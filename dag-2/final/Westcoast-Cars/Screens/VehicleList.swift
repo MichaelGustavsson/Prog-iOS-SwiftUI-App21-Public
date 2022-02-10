@@ -10,13 +10,20 @@ import SwiftUI
 struct VehicleList: View {
     
     @State private var displayCreateVehicle = false
+    @ObservedObject private var vehicleListVM: VehicleListViewModel
+    
+    init() {
+        vehicleListVM = VehicleListViewModel()
+        vehicleListVM.getAllVehicles()
+    }
     
     var body: some View {
             NavigationView {
-                VehicleListView()
+                VehicleListView(vehicles: self.vehicleListVM.vehicles)
             }
             .accentColor(.black)
             .navigationViewStyle(.stack)
+//            .onAppear()
     }
 }
 

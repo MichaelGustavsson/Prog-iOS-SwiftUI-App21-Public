@@ -9,12 +9,6 @@ import SwiftUI
 
 struct Home: View {
     
-    init() {
-//        UITabBar.appearance().isTranslucent = false
-//        UITabBar.appearance().backgroundColor = UIColor.orange
-//        UITabBar.appearance().unselectedItemTintColor = UIColor.darkGray
-    }
-    
     var body: some View {
         TabView {
             
@@ -29,7 +23,7 @@ struct Home: View {
                     Image(systemName: "car.2.fill")
                     Text("Våra bilar")
                 }
-                        
+            
             Settings()
                 .tabItem{
                     Image(systemName: "wrench.and.screwdriver.fill")

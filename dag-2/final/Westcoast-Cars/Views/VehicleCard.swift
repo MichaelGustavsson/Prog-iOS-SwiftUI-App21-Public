@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct VehicleCard: View {
-    var vehicle: Vehicle
+    var vehicle: VehicleViewModel
     var body: some View {
         VStack {
-            UrlImage(url: vehicle.imageUrl!)
+            UrlImage(url: vehicle.image)
                 .aspectRatio(contentMode: .fit)
                 .overlay(Rectangle()
                             .stroke(Color.white, lineWidth: 2.0))
@@ -19,8 +19,8 @@ struct VehicleCard: View {
                 .padding(.top, 20)
                 .padding(.horizontal, 30)
             HStack{
-                Text(vehicle.manufacturor.name).font(.title2).fontWeight(.semibold)
-                Text(vehicle.model)
+                Text(vehicle.manufacturor).font(.title2).fontWeight(.semibold)
+                Text(vehicle.vehicleName)
                 Text(String(vehicle.modelYear))
             }.font(.title2).foregroundColor(.white).padding(5)
         }.background(Color.orange)
@@ -30,9 +30,9 @@ struct VehicleCard: View {
     }
 }
 
-struct VehicleCard_Previews: PreviewProvider {
-    static var previews: some View {
-        VehicleCard(vehicle: vehicles[0])
-//            .previewLayout(.sizeThatFits)
-    }
-}
+//struct VehicleCard_Previews: PreviewProvider {
+//    static var previews: some View {
+//        VehicleCard(vehicle: vehicles[0])
+////            .previewLayout(.sizeThatFits)
+//    }
+//}

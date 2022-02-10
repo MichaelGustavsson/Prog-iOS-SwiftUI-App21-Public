@@ -11,8 +11,10 @@ struct VehicleListView: View {
     @State private var displayCreateVehicle = false
     @Environment(\.presentationMode) var presentationMode
     
+    var vehicles: [VehicleViewModel]
+    
     var body: some View {
-        List(vehicles) {
+        List(vehicles, id: \.id) {
             vehicle in
             NavigationLink(destination: VehicleDetail(vehicle: vehicle)){
                 VehicleCard(vehicle: vehicle)
@@ -32,8 +34,8 @@ struct VehicleListView: View {
     }
 }
 
-struct VehicleListView_Previews: PreviewProvider {
-    static var previews: some View {
-        VehicleListView()
-    }
-}
+//struct VehicleListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        VehicleListView()
+//    }
+//}
