@@ -7,18 +7,19 @@
 
 import Foundation
 
-class VehicleService: ObservableObject {
-    
-    //Se till att det inte går att skapa en instans av vår VehicleService.
+class VehicleService {
     private init(){}
     
-    //Skapa en singelton hantering av vår VehicleService.
     static let shared = VehicleService()
     
-    // @escaping = skapar en Closure
-    // Result<Success, Failure>
-    // Result = Succes, vad skall vi returnera
-    // Result = Failure, vad gick fel!
+    func addVehicle(_ createVehicleReq: CreateVehicleRequest, _ manufacturorId: String, completion: @escaping(Result<Bool, NetworkError>) -> Void){
+        
+        guard let url = URL.urlForAddingVehicle(manufacturorId) else {
+            return completion(.failure(.badUrl))
+        }
+        
+    }
+    
     func getAllVehicles(completion: @escaping (Result<[Vehicle]?, NetworkError>) -> Void) {
         
         guard let url = URL.urlForVehicles() else {
@@ -38,13 +39,6 @@ class VehicleService: ObservableObject {
                 print(error)
                 completion(.failure(.decodingError))
             }
-            
-//            if let vehicles = try? JSONDecoder().decode(VehicleMapper.self, from: data) {
-//                completion(.success(vehicles.data))
-//            } else {
-//                completion(.failure(.decodingError))
-//            }
-            
         }.resume()
     }
 }

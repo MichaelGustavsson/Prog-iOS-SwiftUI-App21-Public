@@ -10,6 +10,8 @@
 		EA0C9B8127BBB20C005F87ED /* ManufacturorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C9B8027BBB20C005F87ED /* ManufacturorService.swift */; };
 		EA0C9B8327BBB7CC005F87ED /* ManufacturorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C9B8227BBB7CC005F87ED /* ManufacturorMapper.swift */; };
 		EA0C9B8527BBB8DB005F87ED /* ManufacturorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C9B8427BBB8DB005F87ED /* ManufacturorListViewModel.swift */; };
+		EA0C9B8727BBD89C005F87ED /* CreateVehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C9B8627BBD89C005F87ED /* CreateVehicleViewModel.swift */; };
+		EA0C9B8927BBE914005F87ED /* CreateVehicleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C9B8827BBE914005F87ED /* CreateVehicleRequest.swift */; };
 		EA26876D27B25EDE00F2C783 /* Westcoast_CarsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26876C27B25EDE00F2C783 /* Westcoast_CarsApp.swift */; };
 		EA26876F27B25EDE00F2C783 /* VehicleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26876E27B25EDE00F2C783 /* VehicleDetail.swift */; };
 		EA26877127B25EDF00F2C783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA26877027B25EDF00F2C783 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 		EA0C9B8027BBB20C005F87ED /* ManufacturorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturorService.swift; sourceTree = "<group>"; };
 		EA0C9B8227BBB7CC005F87ED /* ManufacturorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturorMapper.swift; sourceTree = "<group>"; };
 		EA0C9B8427BBB8DB005F87ED /* ManufacturorListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturorListViewModel.swift; sourceTree = "<group>"; };
+		EA0C9B8627BBD89C005F87ED /* CreateVehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVehicleViewModel.swift; sourceTree = "<group>"; };
+		EA0C9B8827BBE914005F87ED /* CreateVehicleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVehicleRequest.swift; sourceTree = "<group>"; };
 		EA26876927B25EDE00F2C783 /* Westcoast-Cars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Westcoast-Cars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26876C27B25EDE00F2C783 /* Westcoast_CarsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Westcoast_CarsApp.swift; sourceTree = "<group>"; };
 		EA26876E27B25EDE00F2C783 /* VehicleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetail.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 			children = (
 				EA26878027B2774000F2C783 /* Vehicle.swift */,
 				EA66FC2F27B3C18C0065A984 /* Manufacturor.swift */,
+				EA0C9B8827BBE914005F87ED /* CreateVehicleRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			children = (
 				EAE5B0A627B513D600F01AEB /* VehicleListViewModel.swift */,
 				EA0C9B8427BBB8DB005F87ED /* ManufacturorListViewModel.swift */,
+				EA0C9B8627BBD89C005F87ED /* CreateVehicleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -279,6 +285,7 @@
 				EAE5B0A327B50AA700F01AEB /* UrlExtension.swift in Sources */,
 				EA66FC3927B3D8DF0065A984 /* VehicleListView.swift in Sources */,
 				EA0C9B8527BBB8DB005F87ED /* ManufacturorListViewModel.swift in Sources */,
+				EA0C9B8727BBD89C005F87ED /* CreateVehicleViewModel.swift in Sources */,
 				EA26877C27B26FB400F2C783 /* VehicleInfo.swift in Sources */,
 				EA26876F27B25EDE00F2C783 /* VehicleDetail.swift in Sources */,
 				EA26878727B296BD00F2C783 /* WelcomeScreen.swift in Sources */,
@@ -295,6 +302,7 @@
 				EA26878527B281D400F2C783 /* HomeScreen.swift in Sources */,
 				EA0C9B8127BBB20C005F87ED /* ManufacturorService.swift in Sources */,
 				EA66FC3027B3C18C0065A984 /* Manufacturor.swift in Sources */,
+				EA0C9B8927BBE914005F87ED /* CreateVehicleRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

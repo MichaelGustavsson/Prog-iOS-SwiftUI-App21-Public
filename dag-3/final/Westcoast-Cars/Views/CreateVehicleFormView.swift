@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct CreateVehicleFormView: View {
-    @State var selectedManufacturor = ""
-    @State var vehicleModel = ""
-    @State var vehicleModelYear = ""
-    @State var mileage = ""
-    @State var color = ""
-    @State var selectedGearType = ""
-    @State var selectedFuelType = ""
     
     @Environment(\.presentationMode) var presentationMode
     
     var manufacturors: [ManufacturorViewModel]
+    
+    @ObservedObject private var createVehicleVM = CreateVehicleViewModel()
+    
+    var isFormValid: Bool {
+        createVehicleVM.manufacturor.isEmpty || createVehicleVM.gearType.isEmpty || createVehicleVM.fuelType.isEmpty || createVehicleVM.model.isEmpty || createVehicleVM.modelYear.isEmpty || createVehicleVM.color.isEmpty || createVehicleVM.mileage.isEmpty
+    }
     
     var body: some View {
         NavigationView{
@@ -30,16 +29,16 @@ struct CreateVehicleFormView: View {
                     } icon: {
                         Image(systemName: "car")
                     }
-                    Picker("Välj tillverkare", selection: $selectedManufacturor){
+                    Picker("Välj tillverkare", selection: self.$createVehicleVM.manufacturor){
                         ForEach(manufacturors, id: \.id){ make in
                             Text(make.name).tag(make.name)
                         }
                     }.pickerStyle(.automatic)
                     
-                    TextField("Ange modell", text: $vehicleModel)
-                    TextField("Ange årsmodell", text: $vehicleModelYear)
-                    TextField("Ange antal km", text: $mileage)
-                    TextField("Ange färg", text: $color)
+                    TextField("Ange modell", text: self.$createVehicleVM.model)
+                    TextField("Ange årsmodell", text: self.$createVehicleVM.modelYear)
+                    TextField("Ange antal km", text: self.$createVehicleVM.mileage)
+                    TextField("Ange färg", text: self.$createVehicleVM.color)
                 }
                 
                 Section {
@@ -49,7 +48,7 @@ struct CreateVehicleFormView: View {
                     } icon: {
                         Image(systemName: "gear")
                     }
-                    Picker("Växellåda", selection: $selectedGearType){
+                    Picker("Växellåda", selection: self.$createVehicleVM.gearType){
                         Text("Manuell").tag("manual")
                         Text("Automat").tag("automatic")
                         Text("Steptronic").tag("steptronic")
@@ -62,7 +61,7 @@ struct CreateVehicleFormView: View {
                     } icon: {
                         Image(systemName: "fuelpump")
                     }
-                    Picker("Bränsletyp", selection: $selectedFuelType){
+                    Picker("Bränsletyp", selection: self.$createVehicleVM.fuelType){
                         Text("Bensin").tag("Bensin")
                         Text("Diesel").tag("Diesel")
                         Text("Hybrid").tag("Hybrid")
@@ -74,11 +73,12 @@ struct CreateVehicleFormView: View {
                     HStack {
                         Spacer()
                         Button("Spara"){
+                            self.createVehicleVM.AddVehicle()
                             presentationMode.wrappedValue.dismiss()
                         }
                         Spacer()
                     }
-                }
+                }.disabled(isFormValid)
             }
             .navigationBarTitle("Lägg till ny bil")
             .navigationBarItems(trailing: Button(action: {

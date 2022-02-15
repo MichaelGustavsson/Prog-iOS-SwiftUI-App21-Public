@@ -8,6 +8,11 @@
 import Foundation
 
 extension URL {
+    
+    static func urlForAddingVehicle( _ manufacturorId: String) -> URL? {
+        return URL(string: "\(Constants.API_URL)manufacturors/\(manufacturorId)/vehicles")
+    }
+    
     static func urlForVehicles() -> URL? {
         return URL(string: "\(Constants.API_URL)vehicles")
     }
