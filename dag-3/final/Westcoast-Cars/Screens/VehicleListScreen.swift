@@ -7,19 +7,22 @@
 
 import SwiftUI
 
-struct VehicleList: View {
+struct VehicleListScreen: View {
     
     @State private var displayCreateVehicle = false
     @ObservedObject private var vehicleListVM: VehicleListViewModel
+    @ObservedObject private var manufacturorListVM: ManufacturorListViewModel
     
     init() {
         vehicleListVM = VehicleListViewModel()
+        manufacturorListVM = ManufacturorListViewModel()
         vehicleListVM.getAllVehicles()
+        manufacturorListVM.getAllManufacturors()
     }
     
     var body: some View {
             NavigationView {
-                VehicleListView(vehicles: self.vehicleListVM.vehicles)
+                VehicleListView(vehicles: self.vehicleListVM.vehicles, manufacturors: self.manufacturorListVM.manufacturors)
             }
             .accentColor(.black)
             .navigationViewStyle(.stack)
@@ -29,6 +32,6 @@ struct VehicleList: View {
 
 struct VehicleList_Previews: PreviewProvider {
     static var previews: some View {
-        VehicleList()
+        VehicleListScreen()
     }
 }

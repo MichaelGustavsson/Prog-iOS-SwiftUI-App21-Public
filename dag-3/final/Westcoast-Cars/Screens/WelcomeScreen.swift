@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Welcome: View {
+struct WelcomeScreen: View {
     var body: some View {
         ZStack{
             Image("create-vehicle-background")
@@ -30,6 +30,6 @@ struct Welcome: View {
 
 struct Welcome_Previews: PreviewProvider {
     static var previews: some View {
-        Welcome()
+        WelcomeScreen()
     }
 }

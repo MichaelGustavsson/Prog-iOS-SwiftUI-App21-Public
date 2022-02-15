@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct Home: View {
+struct HomeScreen: View {
     
     var body: some View {
         TabView {
             
-            Welcome()
+            WelcomeScreen()
                 .tabItem{
                     Image(systemName: "house.fill")
                     Text("Start")
                 }
             
-            VehicleList()
+            VehicleListScreen()
                 .tabItem{
                     Image(systemName: "car.2.fill")
                     Text("Våra bilar")
@@ -36,6 +36,6 @@ struct Home: View {
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        HomeScreen()
     }
 }

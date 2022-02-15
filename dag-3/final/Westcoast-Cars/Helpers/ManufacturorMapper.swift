@@ -2,7 +2,7 @@
 //  ManufacturorMapper.swift
 //  Westcoast-Cars
 //
-//  Created by Michael Gustavsson on 2022-02-09.
+//  Created by Michael Gustavsson on 2022-02-15.
 //
 
 import Foundation

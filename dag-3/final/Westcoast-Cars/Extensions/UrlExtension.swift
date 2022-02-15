@@ -15,4 +15,8 @@ extension URL {
     static func urlForVehicle() -> URL? {
         return URL(string: "")
     }
+    
+    static func urlForManufacturors() -> URL? {
+        return URL(string: "\(Constants.API_URL)manufacturors")
+    }
 }

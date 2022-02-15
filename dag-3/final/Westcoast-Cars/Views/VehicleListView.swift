@@ -12,6 +12,7 @@ struct VehicleListView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var vehicles: [VehicleViewModel]
+    var manufacturors: [ManufacturorViewModel]
     
     var body: some View {
         List(vehicles, id: \.id) {
@@ -28,7 +29,7 @@ struct VehicleListView: View {
         }.sheet(isPresented: $displayCreateVehicle, onDismiss: {
             presentationMode.wrappedValue.dismiss()
         }){
-            CreateVehicleForm()
+            CreateVehicleFormView(manufacturors: self.manufacturors)
         }
         )
     }
