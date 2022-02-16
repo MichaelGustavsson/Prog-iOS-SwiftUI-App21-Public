@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct CreateVehicleFormView: View {
+    @ObservedObject private var createVehicleVM = CreateVehicleViewModel()
     
     @Environment(\.presentationMode) var presentationMode
-    
     var manufacturors: [ManufacturorViewModel]
-    
-    @ObservedObject private var createVehicleVM = CreateVehicleViewModel()
     
     var isFormValid: Bool {
         createVehicleVM.manufacturor.isEmpty || createVehicleVM.gearType.isEmpty || createVehicleVM.fuelType.isEmpty || createVehicleVM.model.isEmpty || createVehicleVM.modelYear.isEmpty || createVehicleVM.color.isEmpty || createVehicleVM.mileage.isEmpty
