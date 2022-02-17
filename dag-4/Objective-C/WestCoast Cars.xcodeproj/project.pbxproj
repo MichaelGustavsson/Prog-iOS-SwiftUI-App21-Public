@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EACE7EA525C2E63700186A46 /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE7EA425C2E63700186A46 /* Vehicle.m */; };
+		EAF415042587AB2A0085C650 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF415032587AB2A0085C650 /* AppDelegate.m */; };
+		EAF415072587AB2A0085C650 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF415062587AB2A0085C650 /* SceneDelegate.m */; };
+		EAF4150A2587AB2A0085C650 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF415092587AB2A0085C650 /* ViewController.m */; };
+		EAF4150D2587AB2A0085C650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF4150B2587AB2A0085C650 /* Main.storyboard */; };
+		EAF4150F2587AB2D0085C650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF4150E2587AB2D0085C650 /* Assets.xcassets */; };
+		EAF415122587AB2D0085C650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF415102587AB2D0085C650 /* LaunchScreen.storyboard */; };
+		EAF415152587AB2D0085C650 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF415142587AB2D0085C650 /* main.m */; };
+		EAF415202588060A0085C650 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF4151F2588060A0085C650 /* CollectionViewController.m */; };
+		EAF41524258806670085C650 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF41523258806670085C650 /* CollectionViewCell.m */; };
+		EAF41528258813D10085C650 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF41527258813D10085C650 /* DetailsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EACE7EA325C2E63700186A46 /* Vehicle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
+		EACE7EA425C2E63700186A46 /* Vehicle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
+		EAF414FF2587AB2A0085C650 /* WestCoast Cars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WestCoast Cars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAF415022587AB2A0085C650 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EAF415032587AB2A0085C650 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EAF415052587AB2A0085C650 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		EAF415062587AB2A0085C650 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		EAF415082587AB2A0085C650 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EAF415092587AB2A0085C650 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EAF4150C2587AB2A0085C650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EAF4150E2587AB2D0085C650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAF415112587AB2D0085C650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EAF415132587AB2D0085C650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAF415142587AB2D0085C650 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EAF4151E2588060A0085C650 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		EAF4151F2588060A0085C650 /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		EAF41522258806670085C650 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		EAF41523258806670085C650 /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		EAF41526258813D10085C650 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		EAF41527258813D10085C650 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAF414FC2587AB2A0085C650 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EACE7EA225C2E61800186A46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EACE7EA325C2E63700186A46 /* Vehicle.h */,
+				EACE7EA425C2E63700186A46 /* Vehicle.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EAF414F62587AB2A0085C650 = {
+			isa = PBXGroup;
+			children = (
+				EAF415012587AB2A0085C650 /* WestCoast Cars */,
+				EAF415002587AB2A0085C650 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EAF415002587AB2A0085C650 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAF414FF2587AB2A0085C650 /* WestCoast Cars.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAF415012587AB2A0085C650 /* WestCoast Cars */ = {
+			isa = PBXGroup;
+			children = (
+				EACE7EA225C2E61800186A46 /* Models */,
+				EAF415022587AB2A0085C650 /* AppDelegate.h */,
+				EAF415032587AB2A0085C650 /* AppDelegate.m */,
+				EAF415052587AB2A0085C650 /* SceneDelegate.h */,
+				EAF415062587AB2A0085C650 /* SceneDelegate.m */,
+				EAF415082587AB2A0085C650 /* ViewController.h */,
+				EAF415092587AB2A0085C650 /* ViewController.m */,
+				EAF4150B2587AB2A0085C650 /* Main.storyboard */,
+				EAF4151C258804490085C650 /* Vehicles */,
+				EAF4150E2587AB2D0085C650 /* Assets.xcassets */,
+				EAF415102587AB2D0085C650 /* LaunchScreen.storyboard */,
+				EAF415132587AB2D0085C650 /* Info.plist */,
+				EAF415142587AB2D0085C650 /* main.m */,
+			);
+			path = "WestCoast Cars";
+			sourceTree = "<group>";
+		};
+		EAF4151C258804490085C650 /* Vehicles */ = {
+			isa = PBXGroup;
+			children = (
+				EAF4151E2588060A0085C650 /* CollectionViewController.h */,
+				EAF4151F2588060A0085C650 /* CollectionViewController.m */,
+				EAF41522258806670085C650 /* CollectionViewCell.h */,
+				EAF41523258806670085C650 /* CollectionViewCell.m */,
+				EAF41526258813D10085C650 /* DetailsViewController.h */,
+				EAF41527258813D10085C650 /* DetailsViewController.m */,
+			);
+			path = Vehicles;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAF414FE2587AB2A0085C650 /* WestCoast Cars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAF415182587AB2D0085C650 /* Build configuration list for PBXNativeTarget "WestCoast Cars" */;
+			buildPhases = (
+				EAF414FB2587AB2A0085C650 /* Sources */,
+				EAF414FC2587AB2A0085C650 /* Frameworks */,
+				EAF414FD2587AB2A0085C650 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WestCoast Cars";
+			productName = "WestCoast Cars";
+			productReference = EAF414FF2587AB2A0085C650 /* WestCoast Cars.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAF414F72587AB2A0085C650 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					EAF414FE2587AB2A0085C650 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = EAF414FA2587AB2A0085C650 /* Build configuration list for PBXProject "WestCoast Cars" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAF414F62587AB2A0085C650;
+			productRefGroup = EAF415002587AB2A0085C650 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAF414FE2587AB2A0085C650 /* WestCoast Cars */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAF414FD2587AB2A0085C650 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAF415122587AB2D0085C650 /* LaunchScreen.storyboard in Resources */,
+				EAF4150F2587AB2D0085C650 /* Assets.xcassets in Resources */,
+				EAF4150D2587AB2A0085C650 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAF414FB2587AB2A0085C650 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAF41524258806670085C650 /* CollectionViewCell.m in Sources */,
+				EAF4150A2587AB2A0085C650 /* ViewController.m in Sources */,
+				EAF415042587AB2A0085C650 /* AppDelegate.m in Sources */,
+				EAF415152587AB2D0085C650 /* main.m in Sources */,
+				EACE7EA525C2E63700186A46 /* Vehicle.m in Sources */,
+				EAF41528258813D10085C650 /* DetailsViewController.m in Sources */,
+				EAF415202588060A0085C650 /* CollectionViewController.m in Sources */,
+				EAF415072587AB2A0085C650 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EAF4150B2587AB2A0085C650 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAF4150C2587AB2A0085C650 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EAF415102587AB2D0085C650 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAF415112587AB2D0085C650 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EAF415162587AB2D0085C650 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EAF415172587AB2D0085C650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAF415192587AB2D0085C650 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3SJT459K8;
+				INFOPLIST_FILE = "WestCoast Cars/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softtech-dev.WestCoast-Cars";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAF4151A2587AB2D0085C650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3SJT459K8;
+				INFOPLIST_FILE = "WestCoast Cars/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softtech-dev.WestCoast-Cars";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAF414FA2587AB2A0085C650 /* Build configuration list for PBXProject "WestCoast Cars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAF415162587AB2D0085C650 /* Debug */,
+				EAF415172587AB2D0085C650 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAF415182587AB2D0085C650 /* Build configuration list for PBXNativeTarget "WestCoast Cars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAF415192587AB2D0085C650 /* Debug */,
+				EAF4151A2587AB2D0085C650 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAF414F72587AB2A0085C650 /* Project object */;
+}
