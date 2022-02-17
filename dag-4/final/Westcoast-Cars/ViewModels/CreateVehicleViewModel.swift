@@ -18,14 +18,30 @@ class CreateVehicleViewModel: ObservableObject {
     @Published var gearType: String = ""
     
     
-    func AddVehicle() {
+    func AddVehicle() async {
         
         let createVehicleReq = CreateVehicleRequest(registrationNumber: registrationNumber, model: model, color: color, modelYear: modelYear, mileage: mileage, fuelType: fuelType, gearType: gearType, imageUrl: "https://i.postimg.cc/nVYKG8qj/no-car.png")
         
-        print(createVehicleReq)
-        
-        VehicleService.shared.addVehicle(createVehicleReq, "61e12f508a8463b2c6a8454e"){result in
+        do{
             
+            guard let response = try await ManufacturorService.shared.getManufacturor(manufacturor) else {
+                print("Det blev ett fel här, kunde inte hitta någon tilverkare med namnet \(manufacturor)")
+                return
+            }
+            
+            VehicleService.shared.addVehicle(createVehicleReq, response.id){result in
+                switch result {
+                case .success(let result):
+                    if let vehicle = result {
+                        print("Sparad \(vehicle)")
+                    }
+                case .failure(let error):
+                    print("Fel \(error.localizedDescription)")
+                }
+            }
+            
+        }catch {
+            print("Error")
         }
                                          
     }

@@ -25,7 +25,7 @@ struct VehicleDetailView: View {
                 .shadow(radius: 20)
             
             
-            VehicleInfoView(value: "\(vehicle.vehicleName)", fontSize: 50).padding()
+            VehicleInfoView(value: "\(vehicle.vehicleName)", fontSize: 40).padding()
             VehicleInfoView(title: "Årsmodell:", value: "\(vehicle.modelYear)")
             VehicleInfoView(title: "Antal km", value: "\(vehicle.mileage)")
             

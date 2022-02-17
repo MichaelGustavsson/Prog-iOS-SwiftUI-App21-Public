@@ -13,6 +13,10 @@ struct CreateVehicleFormView: View {
     @ObservedObject private var manufacturorVehicleVM = ManufacturorListViewModel()
     @ObservedObject private var createVehicleVM = CreateVehicleViewModel()
     
+    var isFormValid: Bool {
+        createVehicleVM.registrationNumber.isEmpty || createVehicleVM.manufacturor.isEmpty || createVehicleVM.gearType.isEmpty || createVehicleVM.fuelType.isEmpty || createVehicleVM.model.isEmpty || createVehicleVM.modelYear.isEmpty || createVehicleVM.color.isEmpty || createVehicleVM.mileage.isEmpty
+    }
+    
     var body: some View {
         NavigationView {
             Form{
@@ -66,12 +70,16 @@ struct CreateVehicleFormView: View {
                 Section {
                     HStack {
                         Spacer()
-                        Button("Spara"){                            
-                            self.presentationMode.wrappedValue.dismiss()
+                        Button("Spara"){
+                            //SwiftUI skapar ett asynkront kodblock
+                            Task {
+                                _ = await self.createVehicleVM.AddVehicle()
+                                self.presentationMode.wrappedValue.dismiss()
+                            }
                         }
                         Spacer()
                     }
-                }
+                }.disabled(isFormValid)
             }
             .navigationBarTitle("Lägg till ny bil")
             .navigationBarItems(trailing: Button(action: {

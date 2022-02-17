@@ -30,4 +30,33 @@ class ManufacturorService {
             }
         }.resume()
     }
+    
+    // Använda Async/Await...
+    func getManufacturor(_ manufacturorName: String) async throws -> Manufacturor? {
+        var foundManufacturor: Manufacturor?
+        
+        guard let url = URL.urlForManufacturors() else {
+            throw NetworkError.badUrl
+        }
+        
+        //Swift version 5.? sätt att hämta data asynkront med Async/Await
+        let(data, response) = try await URLSession.shared.data(from: url)
+        
+        guard(response as? HTTPURLResponse)?.statusCode == 200 else {
+            throw NetworkError.badResponse
+        }
+        
+        guard let manufacturors = try? JSONDecoder().decode(ManufacturorMapper.self, from: data) else {
+            throw NetworkError.decodingError
+        }
+        
+        for manufacturor in manufacturors.data {
+            if manufacturor.name == manufacturorName {
+                foundManufacturor = manufacturor
+                break
+            }
+        }
+        
+        return foundManufacturor
+    }
 }

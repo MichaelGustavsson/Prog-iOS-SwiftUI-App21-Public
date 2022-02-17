@@ -10,6 +10,7 @@ import Foundation
 class VehicleListViewModel: ObservableObject {
       
     @Published var vehicleList: [VehicleViewModel] = [VehicleViewModel]()
+    @Published var errorMessage: String = ""
     
     func getAllVehicles() {
         VehicleService.shared.getAllVehicles{result in
@@ -22,6 +23,10 @@ class VehicleListViewModel: ObservableObject {
                 }
             case .failure(let error):
                 print(error.localizedDescription)
+                
+                DispatchQueue.main.async {
+                    self.errorMessage = "Hoppsan vi hittade inga bilar just nu, försök igen senare"
+                }
             }
         }
     }

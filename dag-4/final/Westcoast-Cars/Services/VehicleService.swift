@@ -12,11 +12,31 @@ class VehicleService {
     
     static let shared = VehicleService()
     
-    func addVehicle(_ createVehicleReq: CreateVehicleRequest, _ manufacturorId: String, completion: @escaping(Result<Bool, NetworkError>) -> Void){
+    func addVehicle(_ createVehicleReq: CreateVehicleRequest, _ manufacturorId: String, completion: @escaping(Result<VehicleAddedResponse?, NetworkError>) -> Void){
         
         guard let url = URL.urlForAddingVehicle(manufacturorId) else {
             return completion(.failure(.badUrl))
         }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? JSONEncoder().encode(createVehicleReq)
+        
+        URLSession.shared.dataTask(with: request){data, response, error in
+            
+            guard let data = data, error == nil else {
+                return completion(.failure(.noData))
+            }
+            
+            let createdVehicleResponse = try? JSONDecoder().decode(CreatedVehicleResponse.self, from: data)
+            
+            if let result = createdVehicleResponse {
+                completion(.success(result.data))
+            }else {
+                completion(.failure(.decodingError))
+            }
+        }.resume()
         
     }
     

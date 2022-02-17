@@ -16,14 +16,13 @@ struct VehicleListScreen: View {
     var body: some View {
         NavigationView{
             VStack {
+                Text(self.vehicleListVM.errorMessage)
                 VehicleListView(vehicles: self.vehicleListVM.vehicleList)
             }
             .onAppear{
                 self.vehicleListVM.getAllVehicles()
             }
             .sheet(isPresented: $displayCreateVehicle, onDismiss: {
-//                self.displayCreateVehicle = false
-                print("Loading data on dismiss")
                 self.vehicleListVM.getAllVehicles()
             }) {
                 CreateVehicleFormView()
